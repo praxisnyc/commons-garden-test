@@ -1,0 +1,212 @@
+---
+title: SSB groups
+cover: 6564852d50505845e2b6be.webp
+status: draft
+category: SSB commons
+date: 2022-11-22 02:03:16 -0500
+---
+
+<p>Secure Scuttlebutt (also know as SSB, for short) is a <a href="https://en.wikipedia.org/wiki/Delay-tolerant_networking">delay-tolerant</a> open source and <a href="https://ssbc.github.io/scuttlebutt-protocol-guide/">distributed protocol</a>, totally ryzomatic (as in: can't be bought by far-right oligarchs or shut down by odious tyrants) that Praxis have been helping for a while.</p>
+
+<p>We're working closely with <a href="https://www.manyver.se/">Maniverse</a>, a SSB client doing a good job of sustainably build to-commons products. From them, we were invited to help with usability of a new SSB protocol feature, <i>Groups</i>.</p>
+
+<h3>Why groups</h3>
+
+<img src="/images/ssb/old.png" width="50%" style="float:right;margin-left: 15px;">
+<p>Groups are important because SSB is a cloud-less peer-to-peer platform. That means groups can coordinate, share memories, manage resources, away from prying eyes.</p>
+
+<h3>On audience and deliverables</h3>
+
+<p>Currently the two apps spearheading the new feature are <a href="https://manyver.se">Manyverse</a> and <a href="https://ahau.io/">Āhau</a> (a data-sovereignty-minded app built for indigenous groups) but others will come.</p>
+
+<p>Because we're creating specs for different apps, design deliverables are loose (mostly flows and wireframes) so apps themselves can personalize as they wish. SSB community is composed of fun-as-fuck individuals, so it's cool to build stuff together.</p>
+
+<h3>Assumptions and scope</h3>
+
+<p>We started by validating assumptions to produce an agreed scope. <a href="https://hackmd.io/@praxis/assumptions">From there</a> we validated group personas.</p>
+
+<h3>Group personas</h3>
+
+<p>User personas are archetypes that render explicit to members of the team the kind of user we're building <em>for</em>. Making it explicit help us align our goals, reducing confusion.</p>
+
+<p>You use personas as acid test <em>against</em> a proposed flow, empathizing with their needs and goals and limitations.</p>
+
+<p>For SSB, we decided on <strong>group personas</strong> since it's a <em>social</em> media after all.</p>
+
+<ul>
+<li><p><strong>family photos</strong>: family wants to share pics of their life when they meet, seamlessly and privately. think siblings meeting for coffee while their devices update pics.</p></li>
+<li><p><strong>company documentation</strong>: company writes their policies, code of ethics, tutorials straight on SSB. publicly or privately (closed groups?)</p></li>
+<li><p><strong>indigenous groups</strong>: collective mapping and oral stories, respecting data sovereignty (related: <a href="https://cdn.auckland.ac.nz/assets/psych/about/our-research/documents/TMR%2BM%C4%81ori%2BData%2BSovereignty%2BPrinciples%2BOct%2B2018.pdf">Principles of Māori Data Sovereignty</a>, PDF)</p></li>
+<li><p><strong>study groups</strong>: a book club using SSB for event planning, notes and overall book (or any media, in fact) criticism</p></li>
+<li><p><strong>political refugees</strong>: climate migration is on the rise. how can SSB help coordination of resources where corporate clouds fail?</p></li>
+</ul>
+<h3>Negative personas</h3>
+
+<p>The easier we make to enter and enjoy our tools, the more we're a target of recruiters. </p>
+
+<p>Any group that depends on recruiting to grow should be part of our threat model. I'm talking about:</p>
+<ul>
+<li><p>nazis, white supremacists, alt-right</p></li>
+<li><p>cults, MLM, pyramid schemes</p></li>
+<li><p>marketeers, PR</p></li>
+<li><p>political propaganda, sock puppets</p></li>
+</ul>
+<p>Possible deterrences are authentication security (that's our next post), blocklists (of both users and subs, or even subs that follow them-like <a href="https://news.ycombinator.com/item?id=28961688">gab vs mastodon</a> teach us), flagging systems, etc.</p>
+
+
+<h3>Group profiles</h3>
+
+<p>To simplify specs, certain SSB features are called objects. Objects can be pointed at (shared, linked, referenced) and have a profile that shows more or less of its contents depending on the relationship user has with it.</p>
+
+<p>Users have 4 types of relationship with groups: they're either in, out, request to enter, or invited to enter.</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="400" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fy96kXBNrjb7pQHiM3mqz6x%2FNGI-group-profile%3Fnode-id%3D0%253A1%26t%3DzVwYbltxB8oTU2Ty-1" allowfullscreen></iframe>
+
+<h3>Joining a group</h3>
+
+<p>Groups are opaque to outsiders, but existence of the group is not. Outside users can either request to join, or be invited to.</p>
+
+<p>To request to join, user answers pre-filled questions that then become a thread seen only by admins asking follow up questions. Admins can accept, reject or even silently reject candidate.</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="400" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeD544FE8ISRTTQ6yMBnLwp%2Fgroups%253A-outside-in%3Fnode-id%3D0%253A1%26t%3D22SnoizTU4B9uHao-1" allowfullscreen></iframe>
+
+<h3>Sharing on SSB</h3>
+
+<p>Objects that can be shared either <i>inside</i> SSB platform (if you know each other) or <i>outside</i> it (if you only know each other outside it).</p>
+</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="400" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FQZR8K0hmiqmn0AnFYUsAf5%2FNGI-share-menu%3Fnode-id%3D0%253A1%26t%3DUvn3nCGDS4NL1UEY-1" allowfullscreen></iframe>
+
+<p>sharing outside SSB platform generates a token page that acts as a bridge, redirecting outside user towards the platform either by connecting with an existing account/app, or suggesting them to install it.</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="400" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fl15acWnkEQgL9fGAmOtPQe%2Fshare%252Finvite-%255Bgitlab%255D-1887%3Fnode-id%3D0%253A1%26t%3DXt41VUV3UluMVnIn-1" allowfullscreen></iframe>
+
+<p>Sharing tokens links appear as Open Graph for friends. Token link and page are generic, and don't leak info of what exactly is on the other side, besides type of object.</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="400" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FyGmONMQQcHNx0rkklLqLOO%2FNGI-open-graph%3Fnode-id%3D0%253A1%26t%3DDyXpPKCWqGo5dgOo-1" allowfullscreen></iframe>
+
+
+<h3>Invitation to a group</h3>
+
+
+<p>Group invitations are also an object, but can only be claimed by the person invited, or have a 1 week expiration date if invitation is made outside SSB platform.</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="400" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FZUxScYjG5pFx0iZqRGmahT%2FNGI-invite-to-group%3Fnode-id%3D0%253A1%26t%3DLGfgPK5jXAwFf7E0-1" allowfullscreen></iframe>
+
+<p>Being thrown into a group automatically violates consent, but it's a choice corporate social media made to drives engagement. On SSB, after invitation, user sees profile and choose to join or not.</p>
+
+<h3>Inside a group</h3>
+
+<p>Once a group member, user can see common threads, and if promoted to admin, admin-only and request threads. Candidates only see and interact with their own request thread.</p>
+
+<h3>Member directory</h3>
+
+<p>Group members can view other members, along with their personal relationships and possible actions.</p>
+<p>SSB groups act as a truce between blocked, muted members: Members and admins are notified when people blocked by members join group or admin. The mutual notification forces existing members to discuss their differences before acting.</p>
+<p>Group messages are seen by all members, so any message blocked/muted person sends can be seen.</p>
+<p>Blocked members are not notified. Sincve muting is silent, only member who muted is notified and has access to list.</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="400" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fq6obgZ2UoRzHU9bbaNEYnO%2FNGI-member-directory%3Fnode-id%3D0%253A1%26t%3Dlh9tUvlIrNJdgFFT-1" allowfullscreen></iframe>
+
+<h3>Deleting a user</h3>
+
+<p class="pending">soon</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="400" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FfG7jkqBgXHJaW5J4M3pdkV%2FNGI-delete-user%3Fnode-id%3D0%253A1%26t%3DImPPsdRGf4F3Jsox-1" allowfullscreen></iframe>
+
+<!-- <p class="pending">group chat to private chat</p>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="400" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FuVNlT3lbwoyL11QYNgQbwS%2FNGI-group-chat-to-private-group%3Fnode-id%3D0%253A1%26t%3DKB5k02prgZsxZ1h9-1" allowfullscreen></iframe> -->
+
+
+<h3>Conclusion</h3>
+
+<p>Deliverables were presented to App designers, that are free to personalize it.</p>
+
+
+<!-- 
+<div class="diagram">
+	<div class="scroll">
+		<img src="/images/ssb/token-link-page.svg" width="900">
+	</div>
+	<p>
+		<a href="https://www.figma.com/file/gdFJoESzGsHtoEDqCnNKCW/NGI-token-link-page?node-id=0%3A1&t=8TBtj7GBZJPYyZZD-1">view original (figma)</a>
+	</p>
+</div>
+<div class="diagram">
+	<div class="scroll">
+		<img src="/images/ssb/outside-in.png" width="1200">
+	</div>
+	<p>
+		<a href="https://www.figma.com/file/eD544FE8ISRTTQ6yMBnLwp/groups%3A-outside-in?node-id=0%3A1&t=hyrCFt7kJRoTPZew-1">view original (figjam)</a>
+	</p>
+</div>
+<div class="diagram">
+	<div class="scroll">
+		<img src="/images/ssb/share-invite.png" width="1200">
+	</div>
+	<p>
+		<a href="https://www.figma.com/file/l15acWnkEQgL9fGAmOtPQe/share%2Finvite-%5Bgitlab%5D-1887?node-id=0%3A1&t=LnwyyRNUaAfBldU7-1">view original (figjam)</a>
+	</p>
+</div>
+<div class="diagram">
+	<div class="scroll">
+		<img src="/images/ssb/share-menu.svg" width="1200">
+	</div>
+	<p>
+		<a href="https://www.figma.com/file/QZR8K0hmiqmn0AnFYUsAf5/NGI-share-menu?node-id=0%3A1&t=0VYA70Kc7mAgpvY3-1">view original (figma)</a>
+	</p>
+</div>
+<div class="diagram">
+	<div class="scroll">
+		<img src="/images/ssb/group-profile.svg" width="100%">
+	</div>
+	<p>
+		<a href="https://www.figma.com/file/y96kXBNrjb7pQHiM3mqz6x/NGI-group-profile?node-id=0%3A1&t=sssjmyCUoservwTH-1">view original (figma)</a>
+	</p>
+</div>
+<div class="diagram">
+	<div class="scroll">
+		<img src="/images/ssb/invite-friends.svg" width="500">
+	</div>
+		<p>
+		<a href="https://www.figma.com/file/ZUxScYjG5pFx0iZqRGmahT/NGI-invite-to-group?node-id=0%3A1&t=Nax7QX1rpzpF7Yq4-1">view original (figma)</a>
+	</p>
+</div>
+<div class="diagram">
+	<div class="scroll">
+		<img src="/images/ssb/non-friend-ssb.svg" width="1000">
+	</div>
+	<p>
+		<a href="https://www.figma.com/file/cl6HC5lbINjhv2TTjzhNs6/NGI-non-friend-SSB?node-id=0%3A1&t=n7h3uRlTyL1jd9WJ-1">view original (figma)</a>
+	</p>
+</div>
+<div class="diagram">
+	<div class="scroll">
+		<img src="/images/ssb/objects.svg" width="500">
+	</div>
+	<p>
+		<a href="https://www.figma.com/file/N6UL9lkHKZwuRjk1LAkcJE/NGI-objects?node-id=0%3A1&t=2FYjn5G0FXR8XvvQ-1">view original (figma)</a>
+	</p>
+</div>
+<div class="diagram">
+	<div class="scroll">
+		<img src="/images/ssb/open-graph.svg" width="400">
+	</div>
+	<p>
+		<a href="https://www.figma.com/file/yGmONMQQcHNx0rkklLqLOO/NGI-open-graph?node-id=0%3A1&t=hJzEYL60hCddfKIN-1">view original (figma)</a>
+	</p>
+	
+</div>
+<div class="diagram">
+	<div class="scroll">
+		<img src="/images/ssb/chat-to-groups.svg" width="300">
+	</div>
+	<p>
+		<a href="https://www.figma.com/file/uVNlT3lbwoyL11QYNgQbwS/NGI-group-chat-to-private-group?node-id=0%3A1&t=FODb6x3MiSc0eUOr-1">view original (figma)</a>
+	</p>
+</div>
+
+
+
+ -->
