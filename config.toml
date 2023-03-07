@@ -1,7 +1,6 @@
 baseURL = "https://commons.garden/"
 languageCode = "en-us"
 title = "Commons Garden"
-description = "Decolonize your attention"
+description = "Knowledge Commons"
 publishDir = "docs"
-logo = "logo-big.svg"
-category = ["article", "initiative", "organization", "spec", "team", "volunteer", "wireframe"]
+category = ["article", "initiative", "organization", "spec", "team", "volunteer", "wireframe", "note"]
